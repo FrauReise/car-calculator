@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Car Calculator</title>
+	<link rel="stylesheet" href="assets/style/normalize.css">
+	<link rel="stylesheet" href="assets/style/style.css">
+
+</head>
+
+<body>
+
+	<main class="main">
+		<form class="container">
+			<div class="price-calculator">
+				<h1 class="calculator-title">Рассчитайте стоимость автомобиля!</h1>
+				<div class="form">
+					<select class="car-choose" id="carBrand">
+						<option selected>Выберите марку автомобиля</option>
+						<option value="100000">Lada</option>
+						<option value="530000">Skoda</option>
+						<option value="650000">Audi</option>
+						<option value="800000">Toyota</option>
+						<option value="1000000">Hyundai</option>
+						<option value="7000000"> Ferrari</option>
+					</select>
+				</div>
+
+				<div class="car-select">
+					<select class="form-car" id="carBody">
+						<option selected>Кузов</option>
+						<option value="100000">Седан</option>
+						<option value="200000">Универсал</option>
+						<option value="400000">Минивэн</option>
+						<option value="500000">Кабриолет</option>
+					</select>
+				</div>
+				<div>
+					<label for="formСheck" class="form-title">Топливо</label>
+					<div class="form-check">
+						<input class="form-input" name="fuel" type="radio" id="fuelCheck" value="20000" checked>
+						<label class="form-label" for="exampleRadios1">Бензин</label>
+					</div>
+					<div class="form-check">
+						<input class="form-input" name="fuel" type="radio" id="fuelCheck" value="30000">
+						<label class="form-label" for="exampleRadios2">Дизель</label>
+					</div>
+					<div class="form-check">
+						<input class="form-input" name="fuel" type="radio" id="fuelCheck" value="40000">
+						<label class="form-label" for="exampleRadios3">Биодизель</label>
+					</div>
+				</div>
+				<div class="form-gear" >
+					<select class="form-control" id="carGearShift">
+						<option selected>КПП автомобиля</option>
+						<option value="12000">Механика</option>
+						<option value="40000">Автомат</option>
+					</select>
+				</div>
+				<div>
+					<label for="formСheckYear"  class="form-title">Годы выпуска</label>
+					<div class="form-check">
+						<input class="form-input"  name="year" type="radio" id="yearCheck" value="50000">
+						<label class="form-label" for="exampleRadios13">1990-2000</label>
+					</div>
+					<div class="form-check">
+						<input class="form-input" name="year" type="radio" id="yearCheck" value="500000">
+						<label class="form-label" for="exampleRadios12">2000-2010</label>
+					</div>
+					<div class="form-check">
+						<input class="form-input" name="year" type="radio" id="yearCheck" value="5000000" checked>
+						<label class="form-label" for="exampleRadios11">2010-2020</label>
+					</div>
+					
+				</div>
+			
+				<button type="button" class="price-btn" id="btnPrice" onclick="carCalculator()">Узнать стоимость</button>
+				<button type="button" class="clear-btn" id="btnReset" onclick="reloadPage()">Сбросить данные</button>
+			</div>
+			<div class="result_price">
+				<div id="result">
+					
+				</div>
+			</div>
+		</form>
+
+	<div class="car-container">
+
+		<div class="car">
+			<img src="assets/img/car.png" alt="">
+		</div>
+
+		<div class="wheel">
+			<img src="assets/img/wheel.png" alt="" class="back-wheel">
+			<img src="assets/img/wheel.png" alt="" class="front-wheel">
+		</div>
+
+	</div>
+		
+	
+    </main>
+	
+
+	<script src="assets/script/script.js"></script>
+</body>
+
+</html>

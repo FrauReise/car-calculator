@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url("assets/fonts/Roboto-Medium.ttf") format("ttf");
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.calculator-title {
+    text-align: center; 
+    font-size: 2em; 
+    font-family:'Roboto', Helvetica,sans-serif;
+}
+
+.form-title {
+    font-size: 1.5em; 
+    font-family:'Roboto', Helvetica,sans-serif;
+}
+
+.form,
+.form-check,
+.form-gear,
+.car-select {
+   margin: 2%;
+   font-size: 20px;
+}
+
+.container{
+ display: flex;
+ justify-content: center;
+}
+
+.result_price {
+margin: 5%;
+}
+
+.price-btn {
+    background-color: rgb(110, 174, 234);
+    width: 150px;
+    height: 40px;
+    border: none;
+}
+
+.clear-btn {
+    background-color: rgb(232, 207, 97);
+    width: 150px;
+    height: 40px;
+    border: none; 
+}
+
+
+/* Анимация автомобиля */
+
+.car-container {
+    position: absolute;
+    left: 70%;
+    top: 85%;
+}
+
+.car{
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.car img{
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+
+@keyframes car{
+    100%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(1px);
+    }
+    0%{
+        transform: translateY(-1px);
+    }
+}
+
+.wheel{
+    left: 50%;
+    position: absolute;
+    bottom: 171px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.wheel img{
+    width: 65px;
+    height: 65px;
+    animation: wheel 1s linear infinite;
+}
+
+.back-wheel{
+    left: -146px;
+    position: absolute;
+}
+.front-wheel{
+    left: 100px;
+    position: absolute;
+}
+
+@keyframes wheel{
+    100%{
+        transform: rotate(360deg);
+    }
+}
